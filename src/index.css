@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,body {
+    scroll-behavior: smooth;
+}
+
+@keyframes typing {
+    0% {
+        width: 0px;
+    } 100% {
+        width: 100%;
+    }
+}
+@keyframes blink {
+    0%,100%{
+        border-color: transparent;
+    } 50% {
+        border-color: orange;
+    }
+}
+.animate_text{
+    animation: typing 4s ease-in-out, blink 0.8s ease-in-out infinite;
+}
+.group :hover .animate_title{
+    animation: typing 1s ease-in-out;
+}
+
+
